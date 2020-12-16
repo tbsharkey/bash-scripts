@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Creates a basic website file system with a stylesheet, javascript file, and image folder.
+# Creates a basic website file structure with a stylesheet, javascript file, and image folder.
+# Install in ~/bin and follow with the command 'chmod +x ~/bin/make'.
+# Usage: make <name of project>
 
 pid=$1
 mkdir $pid && cd $pid

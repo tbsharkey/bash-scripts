@@ -15,7 +15,7 @@ cat > index.html <<EOF
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="main.css">
-  <script src="main.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
   
@@ -24,5 +24,5 @@ cat > index.html <<EOF
 EOF
 mkdir -p assets/{images,css,js}
 touch assets/css/main.css 
-touch assets/js/main.js
+touch assets/js/script.js
 git init

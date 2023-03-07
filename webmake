@@ -4,6 +4,17 @@
 # Install in ~/bin and follow with the command 'chmod +x ~/bin/webmake'.
 # Usage: webmake <name of project>
 
+if [ $# -eq 0 ]; then
+  echo "Please provide a name for the project."
+  exit 1
+fi
+
+if ! command -v git &> /dev/null
+then
+    echo "Git is not installed. Please install Git and try again."
+    exit 1
+fi
+
 pid=$1
 mkdir $pid && cd $pid
 touch index.html
@@ -14,8 +25,8 @@ cat > index.html <<EOF
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="main.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/script.js"></script>
 </head>
 <body>
   
